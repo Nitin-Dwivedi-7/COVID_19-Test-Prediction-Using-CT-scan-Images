@@ -12,5 +12,7 @@ We are Using Deep Learning Model for Image classification
 image.py is the python flask file for the backend 
 covid_frontend is the frontend html code and style.css is the css file for the same.
 
+In back end we have use VGG19 model for futher execution.
+
 
 Project is under development
