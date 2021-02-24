@@ -9,4 +9,8 @@ We are Using Deep Learning Model for Image classification
 5)- ResNet 50 Model
 6)- VGG 16 Model
 
+image.py is the python flask file for the backend 
+covid_frontend is the frontend html code and style.css is the css file for the same.
+
+
 Project is under development
