@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script>
+            function yes()
+            {
+                var x=document.getElementById("input_image");
+                var src1=URL.createObjectURL(x.files[0]);
+                document.getElementById("image_out").src=src1;  
+            }
+        </script>
+       <title>
+           COVID1-19 TEST RESULT PREDICTION
+       </title>
+       <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <header>
+            <hr>
+            <h1>COVID-19 TEST RESULT PREDICTION USING CT-SCAN IMAGES</h1>
+            <hr>
+        </header>
+        <br>
+        <br>
+        
+        <div id="image_div">
+            <div>
+                <img src="{{ user_image }}" alt="User Image"  class="image_n" id="image_out">
+            <!-- <img  src="{{ url_for('static', filename='x.jpg')}}" alt="User Image"  class="image_n" id="image_out"> -->
+        </div>
+            <br>
+            <form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}">
+               <input   type="file" name="photo" id="input_image" accept="image/*" >
+      
+            <br>
+            <button type="submit" id="image_button" onclick="yes()">START</button>
+            <br>
+            {%- for category, message in get_flashed_messages(with_categories = true) %}
+            <div class = "alert alert-danger">
+               {{ message }}
+            </div>
+         {%- endfor %}
+        </form>
+        </div>
+        <footer horizontal layout>
+            
+            <div id="group_div">
+                <h5 class="fc2"><b>GROUP MEMBERSS:-</b></h5>
+                <h6 class="fc2">
+                    <ul style="list-style-type:none;">
+                        <li>NITIN DWIVEDI</li>
+                        <li>ABOLI PAIGHAN</li>
+                        <li>SAMPADA</li>
+                        <li>ANSHUL</li>
+                    </ul>
+                </h6>
+                
+        </footer>
+        
+       
+        
+    </body>
+</html>
